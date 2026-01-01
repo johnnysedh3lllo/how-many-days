@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <title>How many days?</title>
+  </head>
+  <body class="body">
+    <div class="age-calculator">
+      <form action="" id="birthday-form" class="birthday-form">
+        <label>Enter your Birthday</label>
+
+        <div class="date-select">
+          <select name="day-select" id="day-select" class="select"></select>
+
+          <select name="month-select" id="month-select" class="select">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+
+          <select name="year-select" id="year-select" class="select"></select>
+        </div>
+
+        <button type="submit" class="submit-btn">Let&apos;s find out</button>
+      </form>
+
+      <div class="date-output-wrapper hidden">
+        <p>You have lived for:</p>
+        <p class="date-output"></p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
