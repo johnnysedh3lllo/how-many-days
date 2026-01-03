@@ -89,7 +89,7 @@ function initAnimations() {
       "<+=0.15"
     );
 
-  GSDevTools.create({ css: { zIndex: 1000 } });
+  // GSDevTools.create({ css: { zIndex: 1000 } });
 }
 
 document.fonts.ready.then(() => {
