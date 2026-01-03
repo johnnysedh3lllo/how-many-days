@@ -1,14 +1,21 @@
+import { gsap } from "gsap";
+
+import { GSDevTools } from "gsap/GSDevTools";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(GSDevTools, SplitText);
+
 const ELEMENTS = {
-  DAY_SELECT: "#day-select",
+  DAY_SELECT: "day-select",
   MONTH_SELECT: "#month-select",
-  YEAR_SELECT: "#year-select",
-  BIRTHDAY_FORM: "birthday-form",
-  DATE_OUTPUT: ".date-output",
-  DATE_OUTPUT_WRAPPER: ".date-output-wrapper",
+  YEAR_SELECT: "year-select",
+  CALCULATOR_FORM: "birthday-form",
+  CALCULATOR_OUTPUT: ".calculator__output",
+  CALCULATOR_OUTPUT_VALUE: ".calculator__output__value",
 };
 
-const daySelect = document.querySelector(ELEMENTS.DAY_SELECT);
-const yearSelect = document.querySelector(ELEMENTS.YEAR_SELECT);
+const daySelect = document.getElementById(ELEMENTS.DAY_SELECT);
+const yearSelect = document.getElementById(ELEMENTS.YEAR_SELECT);
 
 for (let i = 1; i <= 31; i++) {
   const option = document.createElement("option");
@@ -28,16 +35,17 @@ for (let i = new Date().getFullYear(); i >= new Date(0).getFullYear(); i--) {
   yearSelect?.appendChild(option);
 }
 
-const birthdayForm = document.getElementById(
-  ELEMENTS.BIRTHDAY_FORM
+const calculatorForm = document.getElementById(
+  ELEMENTS.CALCULATOR_FORM
 ) as HTMLFormElement;
 
-const dateOutput = document.querySelector(ELEMENTS.DATE_OUTPUT);
-
-const dateOutputWrapper = document.querySelector(
-  ELEMENTS.DATE_OUTPUT_WRAPPER
+const calculatorOutput = document.querySelector(
+  ELEMENTS.CALCULATOR_OUTPUT
 ) as HTMLDivElement;
 
+const calculatorOutputValue = document.querySelector(
+  ELEMENTS.CALCULATOR_OUTPUT_VALUE
+);
 const MONTHS = {
   "01": "January",
   "02": "February",
@@ -53,7 +61,14 @@ const MONTHS = {
   "12": "December",
 };
 
-birthdayForm?.addEventListener("submit", function (e) {
+const calculatorInteractionTl = gsap.timeline({
+  paused: true,
+});
+calculatorInteractionTl
+  .to(calculatorForm, { autoAlpha: 0 })
+  .fromTo(calculatorOutput, { autoAlpha: 0 }, { autoAlpha: 1 });
+
+calculatorForm?.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const formData = new FormData(this);
@@ -70,13 +85,15 @@ birthdayForm?.addEventListener("submit", function (e) {
   const dayText = totalDays > 1 ? "days" : "day";
   const totalDaysFormatted = new Intl.NumberFormat().format(totalDays);
 
-  if (dateOutput) dateOutput.textContent = `${totalDaysFormatted} ${dayText}`;
+  if (calculatorOutputValue)
+    calculatorOutputValue.textContent = `${totalDaysFormatted} ${dayText}`;
 
-  birthdayForm.classList.add("hidden");
-  dateOutputWrapper.classList.remove("hidden");
+  // calculatorForm.classList.add("hidden");
+  // calculatorOutput.classList.remove("hidden");
+
+  calculatorInteractionTl.play();
 });
 
-dateOutputWrapper?.addEventListener("click", function () {
-  birthdayForm.classList.remove("hidden");
-  dateOutputWrapper.classList.add("hidden");
+calculatorOutput?.addEventListener("click", function () {
+  calculatorInteractionTl.reverse();
 });

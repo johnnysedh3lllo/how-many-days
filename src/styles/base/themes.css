@@ -1,0 +1,95 @@
+/* THEMES */
+[data-theme="bubblegum"] {
+  --surface-primary: #fff8e7;
+  --surface-white: var(--color-white);
+  --surface-brand-primary: #ff6ec7;
+  --surface-brand-secondary: #ffd93d;
+  --surface-accent: #7cf5ff;
+  --surface-accent-soft: #ffd9e7;
+  --surface-accent-slight: #ffefd5;
+
+  --text-primary: #3a3a3a;
+  --text-inverse: var(--color-white);
+  --text-brand: #ff6ec7;
+  --text-accent: #ffd93d;
+  --text-muted: #6e6e6e;
+
+  --interactive-primary: #ff6ec7;
+  --interactive-secondary: #ffd93d;
+}
+
+[data-theme="cyberpunk"] {
+  --surface-primary: #252a34;
+  --surface-white: #2c2f3a;
+  --surface-brand-primary: #ff2e63;
+  --surface-brand-secondary: #08d9d6;
+  --surface-accent: #ffb400;
+  --surface-accent-soft: #393e46;
+  --surface-accent-slight: #3a3f4b;
+
+  --text-primary: #eaeaea;
+  --text-inverse: #0f0f0f;
+  --text-brand: #ff2e63;
+  --text-accent: #08d9d6;
+  --text-muted: #a0a0a0;
+
+  --interactive-primary: #ff2e63;
+  --interactive-secondary: #08d9d6;
+}
+
+[data-theme="cafe"] {
+  --surface-primary: #faf3e0;
+  --surface-white: #ffffff;
+  --surface-brand-primary: #c97b63;
+  --surface-brand-secondary: #ffd8a9;
+  --surface-accent: #a1c181;
+  --surface-accent-soft: #ffeedb;
+  --surface-accent-slight: #fff8f1;
+
+  --text-primary: #4b3832;
+  --text-inverse: #ffffff;
+  --text-brand: #c97b63;
+  --text-accent: #ffd8a9;
+  --text-muted: #7d6e68;
+
+  --interactive-primary: #c97b63;
+  --interactive-secondary: #ffd8a9;
+}
+
+[data-theme="ocean"] {
+  --surface-primary: #e0f7fa;
+  --surface-white: #ffffff;
+  --surface-brand-primary: #0077b6;
+  --surface-brand-secondary: #00b4d8;
+  --surface-accent: #90e0ef;
+  --surface-accent-soft: #caf0f8;
+  --surface-accent-slight: #e3fdfd;
+
+  --text-primary: #023047;
+  --text-inverse: #ffffff;
+  --text-brand: #0077b6;
+  --text-accent: #00b4d8;
+  --text-muted: #406882;
+
+  --interactive-primary: #0077b6;
+  --interactive-secondary: #00b4d8;
+}
+
+[data-theme="midnight"] {
+  --surface-primary: #0f0e17;
+  --surface-white: #1a1925;
+  --surface-brand-primary: #6c63ff;
+  --surface-brand-secondary: #ff6584;
+  --surface-accent: #ffd700;
+  --surface-accent-soft: #2d2b3f;
+  --surface-accent-slight: #1f1d2c;
+
+  --text-primary: #f7f7f7;
+  --text-inverse: #0f0e17;
+  --text-brand: #6c63ff;
+  --text-accent: #ff6584;
+  --text-muted: #b0afc5;
+
+  --interactive-primary: #6c63ff;
+  --interactive-secondary: #ff6584;
+}

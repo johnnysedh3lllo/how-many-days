@@ -1,0 +1,179 @@
+:root {
+  /* CORE TOKENS */
+  --color-white: hsla(0, 0%, 100%);
+  --color-off-white: hsla(300, 5%, 96%, 1);
+  --color-gray-black: hsla(0, 0%, 7%);
+  --color-black: rgb(0, 0, 0);
+  --color-gray: hsla(0, 0%, 62%);
+  /* 
+  --color-yellow-100: hsla(31, 56%, 93%);
+  --color-yellow-200: hsla(36, 88%, 90%, 1);
+  --color-yellow-300: hsla(35, 100%, 82%, 1);
+  --color-yellow-500: hsla(39, 100%, 71%);
+
+  --color-purple-100: hsla(241, 88%, 92%);
+  --color-purple-500: hsla(256, 67%, 59%);
+
+  --color-green-100: hsl(144, 100%, 93%);
+  --color-green-500: hsl(144, 80%, 28%);
+
+  --color-red-100: hsla(0, 100%, 96%, 1); */
+
+  /* --shadow-lg: -0.6113rem 0.7336rem 1.5284rem 0 hsla(285, 65%, 29%, 0.05); */
+
+  /* FONT SIZE */
+  --font-size-xs: 0.5rem; /* 8px  */
+  --font-size-sm: 0.75rem; /* 12px */
+  --font-size-md: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.625rem; /* 26px */
+  --font-size-4xl: 1.75rem; /* 28px */
+  --font-size-5xl: 2rem; /* 32px */
+  --font-size-6xl: 2.125rem; /* 34px */
+  --font-size-7xl: 2.25rem; /* 36px */
+  --font-size-8xl: 2.375rem; /* 38px */
+  --font-size-9xl: 2.5rem; /* 40px */
+  --font-size-10xl: 2.875rem; /* 46px */
+  --font-size-11xl: 3rem; /* 48px */
+  --font-size-12xl: 3.375rem; /* 54px */
+  --font-size-13xl: 3.5rem; /* 56px */
+  --font-size-14xl: 4rem; /* 64px */
+  --font-size-15xl: 4.5rem; /* 72px */
+
+  /* LINE HEIGHT */
+  --leading-tight: 0.9;
+  --leading-snug: 1.1;
+  --leading-normal: 1.5;
+
+  /* LETTER SPACING */
+  --tracking-none: 0px;
+  --tracking-tighter: -0.0975rem;
+  --tracking-tightest: -0.125rem;
+  --tracking-crunched: -0.1875rem;
+
+  /* SPACING */
+  --spacing-25: 0.125rem; /* 2px   */
+  --spacing-50: 0.25rem; /* 4px   */
+  --spacing-100: 0.5rem; /* 8px   */
+  --spacing-150: 0.75rem; /* 12px  */
+  --spacing-200: 1rem; /* 16px  */
+  --spacing-300: 1.5rem; /* 24px  */
+  --spacing-400: 2rem; /* 32px  */
+  --spacing-500: 2.5rem; /* 40px  */
+  --spacing-550: 3rem; /* 48px  */
+  --spacing-600: 4rem; /* 64px  */
+  --spacing-700: 5rem; /* 80px  */
+  --spacing-800: 6rem; /* 96px  */
+  --spacing-900: 8rem; /* 128px */
+  --spacing-1000: 10rem; /* 160px */
+
+  /* SIZE */
+  --size-1: 0.25rem; /* 4px   */
+  --size-2: 0.5rem; /* 8px   */
+  --size-3: 0.75rem; /* 12px  */
+  --size-4: 1rem; /* 16px  */
+  --size-5: 1.25rem; /* 20px  */
+  --size-6: 1.5rem; /* 24px  */
+  --size-7: 2rem; /* 32px  */
+  --size-8: 2.5rem; /* 40px  */
+  --size-9: 3rem; /* 48px  */
+  --size-10: 4rem; /* 64px  */
+  --size-11: 5rem; /* 80px  */
+  --size-12: 6rem; /* 96px  */
+  --size-13: 8rem; /* 128px */
+  --size-14: 10rem; /* 160px */
+  --size-15: 12rem; /* 192px */
+  --size-16: 14rem; /* 224px */
+
+  /* BREAKPOINTS */
+  --breakpoint-md: 47.9375rem;
+  --breakpoint-lg: 79.9375rem;
+
+  /* T-shirt size aliases (semantic sizes) */
+  --size-xxs: var(--size-1);
+  --size-xs: var(--size-3);
+  --size-sm: var(--size-4);
+  --size-md: var(--size-6);
+  --size-lg: var(--size-8);
+  --size-xl: var(--size-10);
+  --size-2xl: var(--size-11);
+  --size-3xl: var(--size-12);
+  --size-4xl: var(--size-14);
+  --size-5xl: var(--size-16);
+
+  /* BORDER RADIUS */
+  --radius-sm: 8px;
+  --radius-md: calc(var(--radius-sm) * 1.25);
+  --radius-full: 6.25rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --font-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-serif: "OFL Sorts Mill Goudy TT", serif;
+
+  /* SEMANTIC TOKENS - Default Theme */
+  --surface-primary: var(--color-gray-black);
+  --surface-secondary: var(--color-black);
+  --surface-inverse: var(--color-white);
+  --surface-brand-primary: var(--color-purple-500);
+  --surface-brand-secondary: var(--color-purple-100);
+  --surface-accent: var(--color-yellow-500);
+  --surface-accent-soft: var(--color-yellow-100);
+  --surface-accent-slight: var(--color-yellow-300);
+  --surface-accent-user: var(--color-red-100);
+  --surface-accent-ai: var(--color-yellow-200);
+
+  --text-primary: var(--color-black);
+  --text-inverse: var(--color-white);
+  --text-brand: var(--color-purple-500);
+  --text-accent: var(--color-yellow-500);
+  --text-muted: var(--color-gray);
+
+  --text-heading-xxl: var(--font-size-9xl);
+  --text-heading-xl: var(--font-size-5xl);
+  --text-heading-lg: var(--font-size-3xl);
+  --text-heading-md: var(--font-size-base);
+  --text-heading-sm: var(--font-size-lg);
+  --text-heading-xs: var(--font-size-md);
+  --text-heading-xxs: var(--font-size-sm);
+
+  --text-body-10xl: var(--font-size-10xl);
+  --text-body-9xl: var(--font-size-9xl);
+  --text-body-8xl: var(--font-size-8xl);
+  --text-body-7xl: var(--font-size-7xl);
+  --text-body-6xl: var(--font-size-6xl);
+  --text-body-5xl: var(--font-size-5xl);
+  --text-body-4xl: var(--font-size-4xl);
+  --text-body-3xl: var(--font-size-3xl);
+  --text-body-2xl: var(--font-size-2xl);
+  --text-body-xl: var(--font-size-xl);
+  --text-body-lg: var(--font-size-lg);
+  --text-body-base: var(--font-size-base);
+  --text-body-sm: var(--font-size-sm);
+  --text-body-xs: var(--font-size-xs);
+
+  --text-width-md: 6ch;
+  --text-width-lg: 9ch;
+  --text-width-xl: 28ch;
+
+  --interactive-primary: var(--color-purple-500);
+  --interactive-secondary: var(--color-yellow-500);
+
+  --status-positive: var(--color-green-500);
+  --status-positive-secondary: var(--color-green-100);
+
+  --status-info: var(--color-purple-500);
+  --status-warning: var(--color-yellow-500);
+
+  --display-flex: flex;
+  --flex-direction-column: column;
+  --flex-direction-row: row;
+
+  --display-grid: grid;
+}

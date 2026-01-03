@@ -8,40 +8,73 @@
     <title>How many days?</title>
   </head>
   <body class="body">
-    <div class="age-calculator">
-      <form action="" id="birthday-form" class="birthday-form">
-        <h1>Enter your Birthday</h1>
+    <section class="hero hero--main">
+      <h2 class="hero__heading hero__heading--wide-md">
+        Have you ever stopped to think?
+      </h2>
+    </section>
 
-        <div class="date-select">
-          <select name="day-select" id="day-select" class="select"></select>
+    <section class="hero hero--moment">
+      <h2 class="hero__heading hero__heading--wide-md">Even for a moment.</h2>
+    </section>
 
-          <select name="month-select" id="month-select" class="select">
-            <option value="01">January</option>
-            <option value="02">February</option>
-            <option value="03">March</option>
-            <option value="04">April</option>
-            <option value="05">May</option>
-            <option value="06">June</option>
-            <option value="07">July</option>
-            <option value="08">August</option>
-            <option value="09">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-          </select>
+    <div class="calculator">
+      <h1 class="calculator__heading calculator__heading--wide-lg">
+        How many days you&apos;ve lived?
+      </h1>
 
-          <select name="year-select" id="year-select" class="select"></select>
-        </div>
+      <div class="calculator__body">
+        <form action="" id="birthday-form" class="calculator__form">
+          <h2 class="calculator__form-title">Enter your Birthday</h2>
 
-        <button type="submit" class="submit-btn">Let&apos;s find out</button>
-      </form>
+          <div class="calculator__inputs">
+            <div class="calculator__date-select">
+              <select
+                name="day-select"
+                id="day-select"
+                class="calculator__select"
+              ></select>
 
-      <div class="date-output-wrapper hidden">
-        <p>You have lived for:</p>
-        <p class="date-output"></p>
+              <select
+                name="month-select"
+                id="month-select"
+                class="calculator__select"
+              >
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+
+              <select
+                name="year-select"
+                id="year-select"
+                class="calculator__select"
+              ></select>
+            </div>
+
+            <button type="submit" class="calculator__submit-btn">
+              find out?
+            </button>
+          </div>
+        </form>
+
+        <section class="calculator__output hidden">
+          <h3 class="calculator__output__title">You have lived for:</h3>
+          <p class="calculator__output__value"></p>
+        </section>
       </div>
     </div>
 
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/scripts/main.ts"></script>
+    <script type="module" src="/src/scripts/animation.ts"></script>
   </body>
 </html>
