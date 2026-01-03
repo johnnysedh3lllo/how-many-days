@@ -219,6 +219,7 @@
 
 .calculator__output__value {
   cursor: pointer;
+  --text-heading-md: var(--font-size-7xl);
   font-size: var(--text-heading-md);
 }
 
