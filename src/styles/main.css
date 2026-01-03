@@ -227,6 +227,32 @@
   display: none;
 }
 
+.calculator__back {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  align-self: center;
+  border: 0;
+  background-color: transparent;
+  padding: 1rem;
+  margin-block-start: 1rem;
+}
+
+.calculator__back svg {
+  inline-size: 3rem;
+  block-size: 3rem;
+
+  transition: scale 200ms ease-in-out;
+  &:hover {
+    scale: 1.2;
+  }
+  &:active {
+    scale: 1;
+  }
+}
+
 @media (min-width: 639px) {
   :root {
     --text-heading-xxl: var(--font-size-11xl);

@@ -2,8 +2,10 @@ import { gsap } from "gsap";
 
 import { GSDevTools } from "gsap/GSDevTools";
 import { SplitText } from "gsap/SplitText";
+import { counterEffect } from "./utils";
 
 gsap.registerPlugin(GSDevTools, SplitText);
+gsap.registerEffect(counterEffect);
 
 const ELEMENTS = {
   DAY_SELECT: "day-select",
@@ -12,6 +14,7 @@ const ELEMENTS = {
   CALCULATOR_FORM: "birthday-form",
   CALCULATOR_OUTPUT: ".calculator__output",
   CALCULATOR_OUTPUT_VALUE: ".calculator__output__value",
+  CALCULATOR_BACK: ".calculator__back",
 };
 
 const daySelect = document.getElementById(ELEMENTS.DAY_SELECT);
@@ -46,6 +49,9 @@ const calculatorOutput = document.querySelector(
 const calculatorOutputValue = document.querySelector(
   ELEMENTS.CALCULATOR_OUTPUT_VALUE
 );
+
+const calculatorBack = document.querySelector(ELEMENTS.CALCULATOR_BACK);
+
 const MONTHS = {
   "01": "January",
   "02": "February",
@@ -64,9 +70,10 @@ const MONTHS = {
 const calculatorInteractionTl = gsap.timeline({
   paused: true,
 });
+
 calculatorInteractionTl
   .to(calculatorForm, { autoAlpha: 0 })
-  .fromTo(calculatorOutput, { autoAlpha: 0 }, { autoAlpha: 1 });
+  .fromTo(calculatorOutput, { autoAlpha: 0 }, { autoAlpha: 1, delay: 0.5 });
 
 calculatorForm?.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -82,18 +89,25 @@ calculatorForm?.addEventListener("submit", function (e) {
   const currentDate = new Date();
   const differenceInTime = Math.abs(currentDate.getTime() - birthday.getTime());
   const totalDays = Math.ceil(differenceInTime / (1000 * 60 * 60 * 24));
+
   const dayText = totalDays > 1 ? "days" : "day";
   const totalDaysFormatted = new Intl.NumberFormat().format(totalDays);
 
   if (calculatorOutputValue)
-    calculatorOutputValue.textContent = `${totalDaysFormatted} ${dayText}`;
+    calculatorOutputValue.innerHTML = `<span class="calculator__output__value--digit">${totalDaysFormatted}</span> ${dayText}`;
 
   // calculatorForm.classList.add("hidden");
   // calculatorOutput.classList.remove("hidden");
 
-  calculatorInteractionTl.play();
+  calculatorInteractionTl
+    // .counter(".calculator__output__value--digit", {
+    //   duration: 1,
+    //   end: totalDays,
+    //   increment: 1,
+    // })
+    .play();
 });
 
-calculatorOutput?.addEventListener("click", function () {
+calculatorBack?.addEventListener("click", function () {
   calculatorInteractionTl.reverse();
 });
