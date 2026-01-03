@@ -13,14 +13,9 @@ const momentHeroHeading = document.querySelector(
 );
 
 const calculatorHeading = document.querySelector(".calculator__heading");
-const calculatorForm = document.querySelector(".calculator__form");
 const calculatorFormTitle = document.querySelector(".calculator__form-title");
 const calculatorDateSelect = document.querySelector(".calculator__date-select");
 const calculatorSubmitBtn = document.querySelector(".calculator__submit-btn");
-const calculatorOutput = document.querySelector(".calculator__output");
-const calculatorOutputValue = document.querySelector(
-  ".calculator__output__value"
-);
 
 function heroTextEntrance(tl: GSAPTimeline, split: SplitText) {
   tl.fromTo(
