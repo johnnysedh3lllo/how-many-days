@@ -18,11 +18,12 @@ const calculatorDateSelect = document.querySelector(".calculator__date-select");
 const calculatorSubmitBtn = document.querySelector(".calculator__submit-btn");
 
 function heroTextEntrance(tl: GSAPTimeline, split: SplitText) {
-  tl.fromTo(
-    split.chars,
-    { y: 90 },
-    { y: 0, stagger: 0.035, duration: 0.95, ease: "back.out" }
-  );
+  tl.from(split.chars, {
+    y: 90,
+    stagger: 0.035,
+    duration: 0.95,
+    ease: "back.out",
+  });
 }
 
 function heroTextExit(tl: GSAPTimeline, split: SplitText) {
@@ -38,7 +39,6 @@ function heroTextExit(tl: GSAPTimeline, split: SplitText) {
 function heroSequence(tl: GSAPTimeline, split: SplitText) {
   heroTextEntrance(tl, split);
   heroTextExit(tl, split);
-  //   heroFadeOut(tl, heroClass);
 }
 
 function initAnimations() {
@@ -55,12 +55,11 @@ function initAnimations() {
     type: "words, chars, lines",
     mask: "lines",
   });
-  //   const calculatorFormTitleSplit = SplitText.create(calculatorFormTitle, {
-  //     type: "lines",
-  //     mask: "lines",
-  //   });
 
   const pageEntranceTl = gsap.timeline();
+
+  pageEntranceTl.to(mainHeroHeading, { autoAlpha: 1, duration: 0.1 });
+  pageEntranceTl.to(momentHeroHeading, { autoAlpha: 1, duration: 0.1 });
 
   heroSequence(pageEntranceTl, heroMainHeadingSplit);
   pageEntranceTl.to(mainHero, { autoAlpha: 0 }).addLabel("mainHeroTimeline");

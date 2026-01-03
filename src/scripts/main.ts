@@ -73,7 +73,8 @@ const calculatorInteractionTl = gsap.timeline({
 
 calculatorInteractionTl
   .to(calculatorForm, { autoAlpha: 0 })
-  .fromTo(calculatorOutput, { autoAlpha: 0 }, { autoAlpha: 1, delay: 0.5 });
+  .fromTo(calculatorOutput, { autoAlpha: 0 }, { autoAlpha: 1, delay: 0.5 })
+  .fromTo(calculatorBack, { autoAlpha: 0 }, { autoAlpha: 1, delay: 0.5 });
 
 calculatorForm?.addEventListener("submit", function (e) {
   e.preventDefault();

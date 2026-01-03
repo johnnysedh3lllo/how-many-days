@@ -9,7 +9,7 @@
   </head>
   <body class="body">
     <section class="hero hero--main">
-      <h2 class="hero__heading hero__heading--wide-md">
+      <h2 class="hero__heading hero__heading--wide-md hidden">
         Have you ever stopped to think?
       </h2>
     </section>
@@ -67,9 +67,11 @@
           </div>
         </form>
 
-        <section class="calculator__output hidden">
-          <h3 class="calculator__output__title">You have lived for:</h3>
-          <p class="calculator__output__value"></p>
+        <div class="calculator__result">
+          <section class="calculator__output hidden">
+            <h3 class="calculator__output__title">You have lived for:</h3>
+            <p class="calculator__output__value"></p>
+          </section>
 
           <button class="calculator__back">
             <svg
@@ -84,7 +86,7 @@
               />
             </svg>
           </button>
-        </section>
+        </div>
       </div>
     </div>
 
